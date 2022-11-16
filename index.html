@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(26, 26, 26);
+            color:rgb(232, 232, 232);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            padding: 5em;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        input{
+            margin: 1.2em;
+            background-color: rgb(110, 110, 110);
+            border-radius: 5px;
+            padding: 5px;
+            border:0;
+        }
+        textarea{
+            background-color: rgb(110, 110, 110);
+        }
+        .alerts{
+            
+            padding: 1.5em;
+            
+            border-radius: 15px;
+        }
+        .alerts *{
+            margin: 10px;
+        }
+    </style>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    
+    <form onsubmit="event.preventDefault()">
+        Firstname: <input type="text" name="firstName">
+        Lastname: <input type="text" name="lastName">
+        Age <input type="number" name="age">
+        E-mail <input type="text" name="email">
+        PESEL <input type="text" name="pesel">
+        Gender <input type="radio" name="gender" value="men"> men <input type="radio" name="gender" value="women"> women
+        Tel <input type="text" name="tel" placeholder="+48123456789">
+        Class <input type="text" name="class">
+        Book title <input type="text" name="title">
+        Publisher <input type="text" name="publisher">
+        ISBN <input type="text" name="isbn">
+        Notes <textarea name="notes" cols="30" rows="10"></textarea> 
+        <input type="submit" name="submit" value="Wyślij">
+    </form>
+    <div class="alerts"></div>
+</body>
+</html>
